@@ -15,7 +15,7 @@ public class _8_StringToInteger {
      * Has a maximum and minimum conversion value of Integer.MAXIMUM and Integer.MINIMUM, 
      * respectively.
      */
-    public static int myAtoi(String s) {
+    public int myAtoi(String s) {
         String str = s.trim();
         long strValue = 0, max = (long) Integer.MAX_VALUE + 1;
 

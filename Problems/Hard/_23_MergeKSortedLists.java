@@ -19,7 +19,7 @@ public class _23_MergeKSortedLists {
      * @param lists Array of k linked-lists lists.  Each linked-list is sorted in ascending order.
      * @return Sorted linked-list
      */
-    public static ListNode mergeKLists(ListNode[] lists) {
+    public ListNode mergeKLists(ListNode[] lists) {
         int nonEmptyListCount = 0, indexOfFirstNonEmpty = -1, indexOfAnotherNonEmpty = -1;
         for (int i = 0; i < lists.length; i++) {
             if (lists[i] != null) {

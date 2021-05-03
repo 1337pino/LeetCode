@@ -13,7 +13,7 @@ public class _15_3Sum {
      * @param nums array of integers (inclusively between -10^5 and 10^5)
      * @return list of 3-integer lists whose sum each add up to 0
      */
-    public static List<List<Integer>> threeSum(int[] nums) {
+    public List<List<Integer>> threeSum(int[] nums) {
         HashMap<Integer, Integer> numsCount = new HashMap<Integer, Integer>();
         List<List<Integer>> answer = new ArrayList<List<Integer>>();
         
@@ -58,29 +58,5 @@ public class _15_3Sum {
         }
 
         return answer;
-    }
-
-    public static void main(String[] args){
-        
-        //Scanner in = new Scanner(System.in);
-        //int elements = Integer.parseInt(in.nextLine());
-        //int[] testInput = new int[elements];
-
-        //for (int i = 0; i < elements; i++) {
-        //    testInput[i] = Integer.parseInt(in.nextLine());
-        //}
-
-        List<List<Integer>> answer = threeSum(new int[] { -2,-2,-2,-2,-2,-2,-123,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0 });
-        //[-2,-2,-2,-2,-2,-2,-123,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0]
-
-        for (int j = 0; j < answer.size(); j++) {
-            String output = "";
-            for (int k = 0; k < answer.get(j).size(); k++) {
-                output += answer.get(j).get(k) + " ";
-            }
-            System.out.println(output);
-        }
-
-        //in.close();
     }
 }

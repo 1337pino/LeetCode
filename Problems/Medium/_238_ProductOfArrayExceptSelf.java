@@ -12,7 +12,7 @@ public class _238_ProductOfArrayExceptSelf {
      * in Nums is less than -30 and greater than 30
      * @return Integer array of the products of all of the elements of nums except for nums[i].
      */
-    public static int[] productExceptSelf(int[] nums) {
+    public int[] productExceptSelf(int[] nums) {
         int[] answer = new int[nums.length];
         
         long maxProduct = 1;
