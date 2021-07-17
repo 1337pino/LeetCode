@@ -9,12 +9,39 @@ import Helper.TreeNode;
 
 public class _94_BinaryTreeInorderTraversal {
     /**
-     * Creates a list of values stored in a binary tree based on an inorder traversal.
+     * Creates a list of values stored in a binary tree based on an inorder traversal using an 
+     * iterative approach.
      * 
      * @param root Root of the binary tree.
      * @return List of all of the trees node values in inorder traversal ordering.
      */
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversalITERATIVE(TreeNode root) {
+        Stack<TreeNode> nodeStack = new Stack<TreeNode>();
+        List<Integer> traversal = new ArrayList<Integer>();
+        TreeNode currentNode = root;
+        
+        while (currentNode != null || nodeStack.empty() == false) {
+            if (currentNode == null) {
+                currentNode = nodeStack.pop();
+                traversal.add(currentNode.val);
+                currentNode = currentNode.right;
+            } else {
+                nodeStack.push(currentNode);
+                currentNode = currentNode.left;
+            }
+        }
+        
+        return traversal;
+    }
+
+    /**
+     * Creates a list of values stored in a binary tree based on an inorder traversal using a 
+     * recursive approach.
+     * 
+     * @param root Root of the binary tree.
+     * @return List of all of the trees node values in inorder traversal ordering.
+     */
+    public List<Integer> inorderTraversalRECURSIVE(TreeNode root) {
         List<Integer> orderedTreeNodes = new ArrayList<Integer>();
                 
         traverseInOrder(root, orderedTreeNodes);
