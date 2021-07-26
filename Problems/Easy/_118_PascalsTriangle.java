@@ -20,12 +20,7 @@ public class _118_PascalsTriangle {
         pascalRows.add(firstRow);
         
         if (numRows >= 2) {
-            List<Integer> secondRow = new ArrayList<Integer>();
-            secondRow.add(1);
-            secondRow.add(1);
-            pascalRows.add(secondRow);
-            
-            for (int i = 2; i < numRows; i++) {
+            for (int i = 1; i < numRows; i++) {
                 List<Integer> row = new ArrayList<Integer>();
                 List<Integer> previousRow = pascalRows.get(pascalRows.size() - 1);
                 
