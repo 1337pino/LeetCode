@@ -5,6 +5,7 @@
 package Problems.Hard;
 
 import java.util.*;
+import Helper.ListNode;
 
 public class _25_ReverseNodesInKGroup {
     /**

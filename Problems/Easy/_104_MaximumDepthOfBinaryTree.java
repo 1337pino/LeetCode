@@ -3,6 +3,7 @@
  */
 
 package Problems.Easy;
+import Helper.TreeNode;
 
 public class _104_MaximumDepthOfBinaryTree {
     /**
@@ -17,18 +18,5 @@ public class _104_MaximumDepthOfBinaryTree {
         int rightDepth = maxDepth(root.right);
         
         return 1 + Math.max(leftDepth, rightDepth);
-    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
     }
 }

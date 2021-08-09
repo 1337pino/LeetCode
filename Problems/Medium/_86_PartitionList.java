@@ -4,6 +4,8 @@
 
 package Problems.Medium;
 
+import Helper.ListNode;
+
 public class _86_PartitionList {
     /**
      * Partitions the linked list based on the value X.  All nodes with a stored value less than X 
